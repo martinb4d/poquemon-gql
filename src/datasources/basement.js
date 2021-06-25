@@ -3,7 +3,7 @@ const { RESTDataSource } = require('apollo-datasource-rest');
 class BasementAPI extends RESTDataSource {
     constructor() {
         super();
-        this.baseURL = 'http://localhost:8080/';
+        this.baseURL = 'https://poquemon-be.herokuapp.com/';
     }
 
     pokemonReducer(pokemon, name) {
