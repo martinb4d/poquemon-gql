@@ -31,14 +31,11 @@ class BasementAPI extends RESTDataSource {
     }
 
     async getOwnedPokemon({ name }) {
-         console.log(name);
         var url = 'pokemons/';
         if (name) {
             url = `${url}${name}`;
         }
         const response = await this.get(url);
-        
-        console.log(response.data);
         
         return  { total :  response.data ? response.data.count : 0 };
     }
